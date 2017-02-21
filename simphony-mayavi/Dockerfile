@@ -28,7 +28,7 @@ RUN apt-get update -qq \
     && mv examples /etc/skel/Desktop/ \
     && cd \
     && rm -rf /tmp/simphony-framework \
-    && echo "(eval `cat $SIMPHONYENV/bin/activate` && mayavi2 -style cleanlooks) &" > /etc/skel/.config/openbox/autostart
+    && echo "(eval `cat $SIMPHONYENV/bin/activate` && mayavi2 -style cleanlooks) &" > /etc/skel/.config/openbox/autostart \
     && chmod 755 /etc/skel/.config/openbox/autostart
 
 # Setup preference for loading simphony-mayavi plugin in Mayavi2
