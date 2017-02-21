@@ -17,7 +17,7 @@ RUN apt-get update -qq \
     && cd /tmp/simphony-framework \
     && git checkout 0.3.1 \
     && make deps apt-mayavi-deps venv-prepare \
-    && source $SIMPHONYENV/bin/activate \
+    && . $SIMPHONYENV/bin/activate \
     && make simphony simphony-mayavi \
     && rm -rf /var/lib/apt/lists/* \
     && cp -rf /root/OpenFOAM/-2.3.1/platforms/linux64GccDPOpt/lib/* $SIMPHONYENV/lib \
